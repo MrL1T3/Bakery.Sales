@@ -8,6 +8,10 @@ namespace Bakery.Sales.Models
     public int BreadCost {get; set;}
     public BreadOrder (int BreadNum)
     {
+      if ((BreadNum-1) % 2 == 0)
+      {
+        BreadNum--;
+      }
       BreadCost = BreadNum * 10;
     }
   } 
