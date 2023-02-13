@@ -1,0 +1,12 @@
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\bakery.sales.csproj.AssemblyReference.cache
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\bakery.sales.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\bakery.sales.AssemblyInfoInputs.cache
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\bakery.sales.AssemblyInfo.cs
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\bakery.sales.csproj.CoreCompileInputs.cache
+C:\Users\emilb\Desktop\bakery.sales\products\bin\Debug\net6.0\bakery.sales.deps.json
+C:\Users\emilb\Desktop\bakery.sales\products\bin\Debug\net6.0\bakery.sales.dll
+C:\Users\emilb\Desktop\bakery.sales\products\bin\Debug\net6.0\bakery.sales.pdb
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\bakery.sales.dll
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\refint\bakery.sales.dll
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\bakery.sales.pdb
+C:\Users\emilb\Desktop\bakery.sales\products\obj\Debug\net6.0\ref\bakery.sales.dll
