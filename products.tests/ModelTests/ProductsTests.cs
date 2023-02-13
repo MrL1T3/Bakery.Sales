@@ -9,9 +9,8 @@ namespace Products.Tests
     [TestMethod]
     public void IsBreadCost_EqualToTen_True()
     {
-      int BreadCostTest = 10;
-      BreadOrder Fresh = new BreadOrder(BreadCostTest);
-      Assert.AreEqual(BreadCostTest, Fresh.BreadCost);
+      BreadOrder Fresh = new BreadOrder(1);
+      Assert.AreEqual(10, Fresh.BreadCost);
     }
   }
 }
