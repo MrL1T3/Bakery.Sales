@@ -1,34 +1,52 @@
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Bakery.Sales.Models
 {
-  public class BreadOrder 
+  public class BakeOrder 
   {
-    public int BreadCost {get; set;}
-    public BreadOrder (int BreadNum)
+    public int OrderCost {get; set;}
+    public string FoodType {get; set;}
+    public BakeOrder (string FoodChoice, int FoodNum)
     {
-      // div by 3 -> always same price
-      
-      if ((BreadNum) % 3 == 0)
+      FoodType = FoodChoice;
+      int FreeNum = 0;
+      int UnitCost = 0;
+      if (FoodType == "bread")
       {
-        int BreadNumTrue = (BreadNum-(BreadNum/3));
-        BreadCost = BreadNumTrue * 5;
+        FreeNum = 3;
+        UnitCost = 5;
       }
-      else if (((BreadNum) % 3 != 0)&&(BreadNum > 3))
+      else if (FoodType == "pastry")
       {
-        int BreadExtra = 0;
-        while (BreadNum % 3 != 0)
+        FreeNum = 4;
+        UnitCost = 2;
+      }
+      else
+      {
+        Console.WriteLine("Our shop sadly doesn't sell that right now, did you want bread or pastries?");
+      }
+
+      if ((FoodNum) % FreeNum == 0)
+      {
+        int FoodNumTrue = (FoodNum-(FoodNum/FreeNum));
+        OrderCost = FoodNumTrue * UnitCost;
+      }
+      else if (((FoodNum) % FreeNum != 0)&&(FoodNum > FreeNum))
+      {
+        int FoodExtra = 0;
+        while (FoodNum % FreeNum != 0)
         {
-          BreadExtra++;
-          BreadNum--;
+          FoodExtra++;
+          FoodNum--;
         }
-        int BreadNumTrue = (BreadNum-(BreadNum/3));
-        BreadCost = (BreadNumTrue + BreadExtra) * 5;
+        int FoodNumTrue = (FoodNum-(FoodNum/FreeNum));
+        OrderCost = (FoodNumTrue + FoodExtra) * UnitCost;
       }
       else 
       {
-        BreadCost = BreadNum * 5;
+        OrderCost = FoodNum * UnitCost;
       }
     }
   } 
