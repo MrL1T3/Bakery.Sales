@@ -8,11 +8,28 @@ namespace Bakery.Sales.Models
     public int BreadCost {get; set;}
     public BreadOrder (int BreadNum)
     {
-      if ((BreadNum-1) % 2 == 0)
+      // div by 3 -> always same price
+      
+      if ((BreadNum) % 3 == 0)
       {
-        BreadNum--;
+        int BreadNumTrue = (BreadNum-(BreadNum/3));
+        BreadCost = BreadNumTrue * 5;
       }
-      BreadCost = BreadNum * 10;
+      else if (((BreadNum) % 3 != 0)&&(BreadNum > 3))
+      {
+        int BreadExtra = 0;
+        while (BreadNum % 3 != 0)
+        {
+          BreadExtra++;
+          BreadNum--;
+        }
+        int BreadNumTrue = (BreadNum-(BreadNum/3));
+        BreadCost = (BreadNumTrue + BreadExtra) * 5;
+      }
+      else 
+      {
+        BreadCost = BreadNum * 5;
+      }
     }
   } 
 }
