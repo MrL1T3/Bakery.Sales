@@ -27,13 +27,13 @@ namespace Products.Tests
     [TestMethod]
     public void IsPastry_True()
     {
-      BakeOrder Fresh = new BakeOrder("pastry", 1);
+      BakeOrder Fresh = new BakeOrder("pastries", 1);
       Assert.AreEqual("pastry", Fresh.FoodType);
     }
     [TestMethod]
     public void IsPastryCost_EqualToSix_True()
     {
-      BakeOrder Fresh = new BakeOrder("pastry", 4);
+      BakeOrder Fresh = new BakeOrder("pastries", 4);
       Assert.AreEqual(6, Fresh.OrderCost);
     }
   }

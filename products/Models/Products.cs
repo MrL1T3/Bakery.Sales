@@ -18,7 +18,7 @@ namespace Bakery.Sales.Models
         FreeNum = 3;
         UnitCost = 5;
       }
-      else if (FoodType == "pastry")
+      else if (FoodType == "pastries")
       {
         FreeNum = 4;
         UnitCost = 2;
