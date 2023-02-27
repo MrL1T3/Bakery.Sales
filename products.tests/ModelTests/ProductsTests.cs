@@ -28,7 +28,7 @@ namespace Products.Tests
     public void IsPastry_True()
     {
       BakeOrder Fresh = new BakeOrder("pastries", 1);
-      Assert.AreEqual("pastry", Fresh.FoodType);
+      Assert.AreEqual("pastries", Fresh.FoodType);
     }
     [TestMethod]
     public void IsPastryCost_EqualToSix_True()
