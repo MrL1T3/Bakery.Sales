@@ -9,32 +9,34 @@ namespace Products.Tests
     [TestMethod]
     public void IsBreadCost_EqualToFive_True()
     {
-      BakeOrder Fresh = new BakeOrder("bread", 1);
+      BreadOrder Fresh = new BreadOrder(1);
       Assert.AreEqual(5, Fresh.OrderCost);
     }
     [TestMethod]
     public void IsBreadCost_EqualToTen_True()
     {
-      BakeOrder Fresh = new BakeOrder("bread", 3);
+      BreadOrder Fresh = new BreadOrder(3);
       Assert.AreEqual(10, Fresh.OrderCost);
     }
     [TestMethod]
     public void IsBreadCost_EqualToTwenty_True()
     {
-      BakeOrder Fresh = new BakeOrder("bread", 5);
+      BreadOrder Fresh = new BreadOrder(5);
       Assert.AreEqual(20, Fresh.OrderCost);
     }
-    [TestMethod]
-    public void IsPastry_True()
-    {
-      BakeOrder Fresh = new BakeOrder("pastries", 1);
-      Assert.AreEqual("pastries", Fresh.FoodType);
-    }
-    [TestMethod]
-    public void IsPastryCost_EqualToSix_True()
-    {
-      BakeOrder Fresh = new BakeOrder("pastries", 4);
-      Assert.AreEqual(6, Fresh.OrderCost);
-    }
+    // [Ignore]
+    // [TestMethod]
+    // public void IsPastry_True()
+    // {
+    //   BakeOrder Fresh = new BakeOrder("pastries", 1);
+    //   Assert.AreEqual("pastries", Fresh.FoodType);
+    // }
+    // [Ignore]
+    // [TestMethod]
+    // public void IsPastryCost_EqualToSix_True()
+    // {
+    //   BakeOrder Fresh = new BakeOrder("pastries", 4);
+    //   Assert.AreEqual(6, Fresh.OrderCost);
+    // }
   }
 }

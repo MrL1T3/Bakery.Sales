@@ -7,12 +7,11 @@ namespace Bakery.Sales
   {
     public static void Main()
     {
-      Console.WriteLine("Would you like to order bread or pastries?");
-      string inputProduct = Console.ReadLine();
-      Console.WriteLine("And how many of that would you like?");
+      Console.WriteLine("We sell loaves of bread and individual pastries,");
+      Console.WriteLine("How many loaves of bread would you like?");
       int inputAmount = Int32.Parse(Console.ReadLine());
-      BakeOrder Fresh = new BakeOrder(inputProduct, inputAmount);
-      int cost = Fresh.OrderCost;
+      BreadOrder Bread = new BreadOrder(inputAmount);
+      int cost = Bread.OrderCost;
       Console.WriteLine("Your order will cost " + cost + " dollars.");
       Main();
     }
