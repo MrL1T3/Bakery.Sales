@@ -43,25 +43,25 @@ namespace Bakery.Sales.Models
     {
       if (PastryNum > 0)
       {
-        if ((PastryNum) % 3 == 0)
+        if ((PastryNum) % 4 == 0)
         {
-          int PastryNumTrue = (PastryNum-(PastryNum/3));
-          OrderCost = PastryNumTrue * 5;
+          int PastryNumTrue = (PastryNum-(PastryNum/4));
+          OrderCost = PastryNumTrue * 2;
         }
-        else if (((PastryNum) % 3 != 0)&&(PastryNum > 3))
+        else if (((PastryNum) % 4 != 0)&&(PastryNum > 4))
         {
           int PastryExtra = 0;
-          while (PastryNum % 3 != 0)
+          while (PastryNum % 4 != 0)
           {
             PastryExtra++;
             PastryNum--;
           }
-          int PastryNumTrue = (PastryNum-(PastryNum/3));
-          OrderCost = (PastryNumTrue + PastryExtra) * 5;
+          int PastryNumTrue = (PastryNum-(PastryNum/4));
+          OrderCost = (PastryNumTrue + PastryExtra) * 2;
         }
         else 
         {
-          OrderCost = PastryNum * 5;
+          OrderCost = PastryNum * 2;
         }
       }
     }
