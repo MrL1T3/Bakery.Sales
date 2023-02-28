@@ -9,10 +9,10 @@ namespace Bakery.Sales
     {
       Console.WriteLine("We sell loaves of bread and individual pastries,");
       Console.WriteLine("How many loaves of bread would you like?");
-      int inputAmount = Int32.Parse(Console.ReadLine());
-      BreadOrder Bread = new BreadOrder(inputAmount);
-      int cost = Bread.OrderCost;
-      Console.WriteLine("Your order will cost " + cost + " dollars.");
+      int InputAmount = Int32.Parse(Console.ReadLine());
+      BreadOrder Bread = new BreadOrder(InputAmount);
+      int Breadcost = Bread.OrderCost;
+      Console.WriteLine("Your order will cost " + Breadcost + " dollars.");
       Main();
     }
   }

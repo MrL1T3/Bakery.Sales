@@ -7,7 +7,7 @@ namespace Bakery.Sales.Models
   public class BreadOrder 
   {
     public int OrderCost {get; set;}
-    public string FoodNum {get; set;}
+    public string BreadNum {get; set;}
     public BreadOrder ( int BreadNum)
     {
       if (BreadNum > 0)
@@ -31,6 +31,37 @@ namespace Bakery.Sales.Models
         else 
         {
           OrderCost = BreadNum * 5;
+        }
+      }
+    }
+  }
+  public class PastryOrder 
+  {
+    public int OrderCost {get; set;}
+    public string PastryNum {get; set;}
+    public PastryOrder ( int PastryNum)
+    {
+      if (PastryNum > 0)
+      {
+        if ((PastryNum) % 3 == 0)
+        {
+          int PastryNumTrue = (PastryNum-(PastryNum/3));
+          OrderCost = PastryNumTrue * 5;
+        }
+        else if (((PastryNum) % 3 != 0)&&(PastryNum > 3))
+        {
+          int PastryExtra = 0;
+          while (PastryNum % 3 != 0)
+          {
+            PastryExtra++;
+            PastryNum--;
+          }
+          int PastryNumTrue = (PastryNum-(PastryNum/3));
+          OrderCost = (PastryNumTrue + PastryExtra) * 5;
+        }
+        else 
+        {
+          OrderCost = PastryNum * 5;
         }
       }
     }
