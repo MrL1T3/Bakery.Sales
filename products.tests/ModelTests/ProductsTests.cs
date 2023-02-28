@@ -24,19 +24,11 @@ namespace Products.Tests
       BreadOrder Fresh = new BreadOrder(5);
       Assert.AreEqual(20, Fresh.OrderCost);
     }
-    // [Ignore]
-    // [TestMethod]
-    // public void IsPastry_True()
-    // {
-    //   BakeOrder Fresh = new BakeOrder("pastries", 1);
-    //   Assert.AreEqual("pastries", Fresh.FoodType);
-    // }
-    // [Ignore]
-    // [TestMethod]
-    // public void IsPastryCost_EqualToSix_True()
-    // {
-    //   BakeOrder Fresh = new BakeOrder("pastries", 4);
-    //   Assert.AreEqual(6, Fresh.OrderCost);
-    // }
+    [TestMethod]
+    public void IsPastryCost_EqualToSix_True()
+    {
+      PastryOrder Fresh = new PastryOrder(4);
+      Assert.AreEqual(6, Fresh.OrderCost);
+    }
   }
 }
