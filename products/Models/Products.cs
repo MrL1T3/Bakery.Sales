@@ -6,63 +6,65 @@ namespace Bakery.Sales.Models
 {
   public class BreadOrder 
   {
-    public int OrderCost {get; set;}
-    public string BreadNum {get; set;}
-    public BreadOrder ( int BreadNum)
+    public string FoodNum {get; set;}
+    public int FreeNum = 3;
+    public int UnitCost = 5;
+    public int OrderCost = 0;
+    public BreadOrder(int FoodNum)
+    {}
+    public void BreadCost(int FoodNum)
     {
-      if (BreadNum > 0)
+      if ((FoodNum) % FreeNum == 0)
       {
-        if ((BreadNum) % 3 == 0)
+        int FoodNumTrue = (FoodNum-(FoodNum/FreeNum));
+        OrderCost = FoodNumTrue * UnitCost;
+      }
+      else if (((FoodNum) % FreeNum != 0)&&(FoodNum > FreeNum))
+      {
+        int FoodExtra = 0;
+        while (FoodNum % FreeNum != 0)
         {
-          int BreadNumTrue = (BreadNum-(BreadNum/3));
-          OrderCost = BreadNumTrue * 5;
+          FoodExtra++;
+          FoodNum--;
         }
-        else if (((BreadNum) % 3 != 0)&&(BreadNum > 3))
-        {
-          int BreadExtra = 0;
-          while (BreadNum % 3 != 0)
-          {
-            BreadExtra++;
-            BreadNum--;
-          }
-          int BreadNumTrue = (BreadNum-(BreadNum/3));
-          OrderCost = (BreadNumTrue + BreadExtra) * 5;
-        }
-        else 
-        {
-          OrderCost = BreadNum * 5;
-        }
+        int FoodNumTrue = (FoodNum-(FoodNum/FreeNum));
+        OrderCost = (FoodNumTrue + FoodExtra) * UnitCost;
+      }
+      else 
+      {
+        OrderCost = FoodNum * UnitCost;
       }
     }
   }
   public class PastryOrder 
   {
-    public int OrderCost {get; set;}
-    public string PastryNum {get; set;}
-    public PastryOrder ( int PastryNum)
+    public string FoodNum {get; set;}
+    public int FreeNum = 4;
+    public int UnitCost = 2;
+    public int OrderCost = 0;
+    public PastryOrder(int FoodNum)
+    {}
+    public void PastryCost(int FoodNum)
     {
-      if (PastryNum > 0)
+      if ((FoodNum) % FreeNum == 0)
       {
-        if ((PastryNum) % 4 == 0)
+        int FoodNumTrue = (FoodNum-(FoodNum/FreeNum));
+        OrderCost = FoodNumTrue * UnitCost;
+      }
+      else if (((FoodNum) % FreeNum != 0)&&(FoodNum > FreeNum))
+      {
+        int FoodExtra = 0;
+        while (FoodNum % FreeNum != 0)
         {
-          int PastryNumTrue = (PastryNum-(PastryNum/4));
-          OrderCost = PastryNumTrue * 2;
+          FoodExtra++;
+          FoodNum--;
         }
-        else if (((PastryNum) % 4 != 0)&&(PastryNum > 4))
-        {
-          int PastryExtra = 0;
-          while (PastryNum % 4 != 0)
-          {
-            PastryExtra++;
-            PastryNum--;
-          }
-          int PastryNumTrue = (PastryNum-(PastryNum/4));
-          OrderCost = (PastryNumTrue + PastryExtra) * 2;
-        }
-        else 
-        {
-          OrderCost = PastryNum * 2;
-        }
+        int FoodNumTrue = (FoodNum-(FoodNum/FreeNum));
+        OrderCost = (FoodNumTrue + FoodExtra) * UnitCost;
+      }
+      else 
+      {
+        OrderCost = FoodNum * UnitCost;
       }
     }
   }
