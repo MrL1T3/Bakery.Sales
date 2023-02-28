@@ -34,5 +34,12 @@ namespace Products.Tests
       Fresh.PastryCost(4);
       Assert.AreEqual(6, Fresh.OrderCost);
     }
+    [TestMethod]
+    public void IsPastryCost_EqualToTwelve_True()
+    {
+      PastryOrder Fresh = new PastryOrder(8);
+      Fresh.PastryCost(8);
+      Assert.AreEqual(12, Fresh.OrderCost);
+    }
   }
 }
