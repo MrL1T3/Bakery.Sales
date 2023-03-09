@@ -2,7 +2,7 @@
 
 #### By Emil J. Anton
 
-#### C# console application taht takes input numbers and returns cost of user's order
+#### C# console application that takes input numbers and returns cost of user's order
 
 ## Technologies Used
 
